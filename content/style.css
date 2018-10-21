@@ -1,0 +1,19 @@
+body{
+  background-image: url("bloemen.jpg");
+  background-color: #e4bbbd;
+}
+
+iframe {
+    display:block;
+    width:100%;
+    height: 85vh;
+    border: 0;
+    padding: 1vh 1vw 1vh 1vw;
+}
+
+@media screen and (min-width: 700px) {
+  .displaycontent {
+    padding-right: 8vw;
+    padding-left: 8vw;
+  }
+}

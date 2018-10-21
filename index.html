@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
+    <link rel="stylesheet" href="content/style.css">
+  </head>
+
+  <body onload="menubuttons()">
+
+    <div class="w3-padding-large">
+      <div class="w3-white w3-round-large" w3-include-html="content/menu.html"></div>
+    </div>
+
+    <div class="displaycontent">
+      <div class="w3-padding-large">
+        <div class="w3-white w3-round-large">
+          <iframe id="pagina" src="pagina/Thuis.htm"></iframe>
+        </div>
+      </div>
+    </div>
+
+    <script>w3.includeHTML();</script>
+
+    <script>
+    // Opmaak voor het menu
+    function menubuttons() {
+      w3.addClass('menuitem','w3-btn w3-padding-small w3-round');
+    }
+    //
+
+
+    // Knop voor het menu op kleine apparaten
+    function w3_open() {
+        document.getElementById("kleinmenu").style.width = "85vw";
+        document.getElementById("kleinmenu").style.display = "block";
+    }
+    function w3_close() {
+        document.getElementById("kleinmenu").style.display = "none";
+    }
+    //
+
+
+    // Juiste Pagina laten zien.
+    var urlParams = new URLSearchParams(window.location.search);
+    var pagina = urlParams.get('pagina');
+    if (pagina !== null) {
+      document.getElementById('pagina').src = "pagina/" + pagina + ".htm";
+    }
+
+    </script>
+  </body>
+
+</html>
