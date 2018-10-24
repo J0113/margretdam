@@ -13,7 +13,7 @@ iframe {
 
 @media screen and (min-width: 700px) {
   .displaycontent {
-    padding-right: 12vw;
-    padding-left: 12vw;
+    padding-right: 16vw;
+    padding-left: 16vw;
   }
 }
